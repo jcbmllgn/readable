@@ -43,7 +43,7 @@ switch(host) {
 	break;
 
 	case 'forbes':
-		$('div.article_actions, .article_footer, .video_promo_block, #comments').remove();
+		$('div.article_actions, .article_footer, .video_promo_block, #comments, .vestpocket').remove();
 		var $newContentReadable = $('div#contentwrapper #abovefold .fleft').html();
 		loadPage($newContentReadable);
 	break;
@@ -81,12 +81,24 @@ switch(host) {
 		loadPage($newContentReadable);
 	break;
 
+	case 'cnn':
+		// $('').remove();
+		var $newContentReadable = $('div#cnnContentContainer').html();
+		loadPage($newContentReadable);
+	break;
+
+	case 'latimes':
+		// $('').remove();
+		var $newContentReadable = $('#content').html();
+		loadPage($newContentReadable);
+	break;
+
+
 	case 'mashable':
 		$('div.post_share, #outbrain_height_marker, footer, #comments, section.more-in, div.fb_widget_wrapper, section#commenting').remove();
 		var $newContentReadable = $('div#primary').html();
 		loadPage($newContentReadable);
 	break;
-
 
 };
 

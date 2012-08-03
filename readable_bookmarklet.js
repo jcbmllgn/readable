@@ -1,5 +1,6 @@
 // version one!
 
+console.log('go');
 
 javascript:(function(){ 
 
@@ -22,13 +23,10 @@ javascript:(function(){
 	    );
 	}
 
-	function havePage() {
+	function havePage() {  // ugly (and definitely not the best way to do it) way of creating the new cover article
 		$('body').prepend('<div id="readable_popup" style="width:100%;height:' + getDocHeight() + 'px ;background:#fafafa; position: relative;top:0px;left:0px;;padding-top:200px;z-index:1000;"><h1>This page (' + host +') is now readable.co</h1></div>');
 	}
 
-
-
-	// $('.twitter-follow, .socialbox, .googleplus-follow, .social-widget, .social, .toolbar-social, div.fb_iframe_widget, div.fb-recommendations, .twitter-follow-button, .fb_ltr, #fb_likebox, .footer, footer').fadeOut(100); 
 
 	switch(host) {
 		case 'jacob':
@@ -60,6 +58,18 @@ javascript:(function(){
 			$('body').html($content);
 			console.log($content);
 			havePage();
+		break;
+
+		case 'cnn':
+			// $('').remove();
+			var $newContentReadable = $('div#cnnContentContainer').html();
+			loadPage($newContentReadable);
+		break;
+
+		case 'latimes':
+			// $('').remove();
+			var $newContentReadable = $('div#content').html();
+			loadPage($newContentReadable);
 		break;
 
 		default:
