@@ -1,0 +1,82 @@
+div#readable_sidebar{
+	position: relative;
+	top: 40px;
+	left: 40px;
+
+}
+
+div#readable_sidebar p {
+	margin: 15px 0px;
+}
+
+div#readable_sidebar p a {
+	color: ;
+}
+
+a#hideReadable {
+	margin-bottom: 10px;
+
+  border-top: 1px solid #cccccc;
+   background: #f7f7f7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#e3e3e3), to(#f7f7f7));
+   background: -webkit-linear-gradient(top, #e3e3e3, #f7f7f7);
+   background: -moz-linear-gradient(top, #e3e3e3, #f7f7f7);
+   background: -ms-linear-gradient(top, #e3e3e3, #f7f7f7);
+   background: -o-linear-gradient(top, #e3e3e3, #f7f7f7);
+   padding: 9px 18px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #787878;
+   font-size: 14px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+}
+a#hideReadable:hover {
+   border-top-color: #d1d1d1;
+   background: #d1d1d1;
+   color: #8c8c8c;
+}
+a#hideReadable:active {
+   border-top-color: #ebebeb;
+   background: #ebebeb;
+}
+
+
+div#uniqueIDright {
+	width:100%;
+	z-index:100000;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#fafafa;
+	text-align:left;
+	font-family: "Helvetica","Times New Roman","serif";
+	font-size:14px;
+	color: #3e3e3e;
+}
+
+div#readable_contentReplacement {
+	width:600px; margin:0px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
