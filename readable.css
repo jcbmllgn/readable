@@ -2,6 +2,7 @@ div#readable_sidebar{
 	position: relative;
 	top: 40px;
 	left: 40px;
+   float: left;
 
 }
 

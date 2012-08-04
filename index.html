@@ -1,39 +1,111 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title></title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://jacob.io/readable/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="http://jacob.io/readable/default.css">
+
+	<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-33855012-1']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	</script>
 </head>
+
 <body>
-<div style="width:500;margin:100px auto 0px auto;">
-	<a href="
-javascript: (function () {   
-    var jsCode = document.createElement('script');   
-    jsCode.setAttribute('src', 'http://jacob.io/readable.co/readable.js');
-  document.body.appendChild(jsCode);   
- }());
- ">Readable.co</a> < drag me to your bookmark bar <br><br>
- <h2>Here's a list of sites it currently works on:</h2>
-<ul>
-	<li><a target="_blank" href="http://forbes.com">Forbes</a></li>
-	<li><a target="_blank" href="http://inc.com">Inc</a></li>
-	<li><a target="_blank" href="http://techcrunch.com">techcrunch</a></li>
-	<li><a target="_blank" href="http://thenextweb.com">thenextweb</a></li>
-	<li><a target="_blank" href="http://boston.com">Boston.com</a></li>
-<!-- 	<li><a target="_blank" href="http://huffingtonpost.com">huffingtonpost</a> ...sometimes :)</li>
- -->	<li><a target="_blank" href="http://mashable.com">Mashable</a></li>
-</ul>
+	<div class="container">
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="./index.html">Readable</a>
+	 			<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="">
+							<a href="#example">Example</a>
+						</li>
+<!-- 						<li class="">
+							<a href="./scaffolding.html">Scaffolding</a>
+						</li> -->
+					</ul> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="readableGrabsThis">
+		<div class="container" id="bodyContainer">
+			<div class="row">
+				<div class="span12">
+					<h1 id="header">Readable: Uncluttering (some) websites and blogs</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span8 offset2">
+					<p>This simple bookmarklet was made to make reading websites easier. Some blogs and news sites have great content but the page is cluttered with social sharing, headers, footers, sidebars, popups, etc.. Readable removes the distractions and just gives you the content.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span6 offset3">
+					<a href="javascript: (function () {   
+		var jsCode = document.createElement('script');   
+		jsCode.setAttribute('src', 'http://jacob.io/readable/readable.js');
+		document.body.appendChild(jsCode);   
+		}());" id="readableButton">Make this page Readable</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span2">
+					<img src="http://jacob.io/readable/social.png" id="socialObnoxious" />
+				</div>
+				<div id="changeHere" class="span6 offset1">
+					<h4>Here's a list of sites Readable currently works on:</h4>
+					<ul>
+						<li><a target="_blank" href="http://forbes.com">Forbes</a></li>
+						<li><a target="_blank" href="http://inc.com">Inc</a></li>
+						<li><a target="_blank" href="http://techcrunch.com">techcrunch</a></li>
+						<li><a target="_blank" href="http://thenextweb.com">thenextweb</a></li>
+						<li><a target="_blank" href="http://boston.com">Boston.com</a></li>
+					<!-- 	<li><a target="_blank" href="http://cnn.com">cnn.com</a></li>
+					 -->	<li><a target="_blank" href="http://wired.com">wired.com</a></li>
+					<!-- 	<li><a target="_blank" href="http://venturebeat.com">venturebeat.com</a></li>
+					 -->
+					<!-- 	<li><a target="_blank" href="http://huffingtonpost.com">huffingtonpost</a> ...sometimes :)</li>
+					 -->	<li><a target="_blank" href="http://mashable.com">Mashable</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
-<br><br><br><br><br>
-
-<div id="delete">I'm annoying social content that clutters your page. You just want to read this lovely article but I'm all up in your face <br>
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jacob.io/readable.co/" data-text="redundant much?" data-via="jcbmllgn">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</div>
-
-
-</div>
-
-
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="span8 offset2 cenText">
+					<h2>Here's a footer that you don't want to read.</h2>
+				</div>
+			</div>
+		</div>
+	</footer>
 
 </body>
 </html>
+
+
+
+
+
+
+
+

@@ -1,6 +1,7 @@
 // version one!
+// Similar to version two, but only optimized for two sites and poorly built..
 
-console.log('go');
+
 
 javascript:(function(){ 
 
@@ -29,11 +30,6 @@ javascript:(function(){
 
 
 	switch(host) {
-		case 'jacob':
-			$('div#delete').fadeOut(100);
-			havePage();
-		break;
-
 		case 'forbes':
 			$('div#leaderboardad, div.moduleContainer, div.inline_sharing, div#follow_bar, header, aside, div.global enable_sticky_header, div#sticky_sharing, div.top_link_strip, div.follow_unireg, div.fb_iframe_widget, div.comment_bug, div.follow_links').fadeOut(100);
 			$('div#sidebar_follower, .moduleContainer, .universal-footer').remove();
@@ -46,36 +42,8 @@ javascript:(function(){
 			havePage();
 		break;
 
-		case 'nytimes':
-			var $text = $('div.articleBody');
-
-			console.log($text);				
-			havePage()
-		break;
-
-		case 'perkstreet':
-			var $content = $('div#front-column-2').html();
-			$('body').html($content);
-			console.log($content);
-			havePage();
-		break;
-
-		case 'cnn':
-			// $('').remove();
-			var $newContentReadable = $('div#cnnContentContainer').html();
-			loadPage($newContentReadable);
-		break;
-
-		case 'latimes':
-			// $('').remove();
-			var $newContentReadable = $('div#content').html();
-			loadPage($newContentReadable);
-		break;
-
 		default:
-			$('body').prepend('<div id="readable_popup" style="width:100%;height:' + getDocHeight() + 'px ;background:#fafafa; position: relative;top:0px;left:0px;;padding-top:200px;z-index:1000;"><h1>This page is now readable.co</h1></div>');
-			$('div#readable_popup').delay(2500).slideUp('500');
-
+			console.log('Sorry, Readable doesn\' work on this website :(');
 		break;
 	}
 

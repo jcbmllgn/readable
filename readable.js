@@ -1,6 +1,7 @@
 // version 2
 
 javascript:(function(){
+
 // If the url bar doesn't have the 'www' we want to change the url split that we're grabbing
 pathArray = window.location.hostname.split('.');
 host = pathArray[1];	// host = name of the website (ie nytimes, forbes, techcrunch, etc)
@@ -12,6 +13,14 @@ if (host == 'io' || host == 'com' || host == 'org' || host == 'edu' || host == '
 
 function loadPage(readable_fillercontent) {
 // ugly (and definitely not the best way to do it) way of creating the new cover articl
+
+	console.log(readable_fillercontent);
+
+	if ( $newContentReadable == null) {
+		readable_fillercontent = "<h3>Sorry but it looks like Readable isn't working on this site</h3><br><br>"
+		console.log('gotcha');
+	}
+
 
 	$('head').prepend('<link rel="stylesheet" type="text/css" href="http://jacob.io/readable.co/readable.css">');
 
@@ -27,21 +36,14 @@ function loadPage(readable_fillercontent) {
 	$('body').prepend('<div id="uniqueIDright" style="height:' + getDocHeight() + 'px;"><div id="readable_sidebar"><a id="hideReadable">Return to origional</a><p>Thanks for using <a href="http://readable.co" target="_blank">Readable.co</a><p><p>By <a href="http://twitter.com/jcbmllgn" target="_blank">@jcbmllgn</a></p></div><div id="readable_contentReplacement">' + readable_fillercontent + '</div></div>');
 
 	// This adds the on click event to the 'return to last page button'
-	$('head').prepend('<script>(function() { $("a#hideReadable").click(function(){  $("div#uniqueIDright").fadeOut("slow");console.log("test");}) })();</script>'); 
+	$('head').prepend('<script>(function() { $("a#hideReadable").click(function(){  $("div#uniqueIDright").fadeOut("slow");}) })();</script>'); 
 
 	}
+console.log(host + ' says boom goes the dynamite.');
 
 
 
-switch(host) {
-	case 'jacob':
-		// grab content:
-		var newContentReadable = $('div#thisissoveryreadable').html(),
-			newHeight = newContentReadable.height;
-		// load content into new readable page:
-		loadPage(newContentReadable); 
-	break;
-
+switch(host) { // I'm checking the name of the current website against sites that readable.co can function on 
 	case 'forbes':
 		$('div.article_actions, .article_footer, .video_promo_block, #comments, .vestpocket').remove();
 		var $newContentReadable = $('div#contentwrapper #abovefold .fleft').html();
@@ -53,18 +55,13 @@ switch(host) {
 		loadPage($newContentReadable);
 	break;
 
-	case 'nytimes':
-		var $newContentReadable = $('div#article div.first').html();
-		loadPage($newContentReadable);
-	break;
-
 	case 'thenextweb':
 		var $newContentReadable = $('div.content .media-wrapper .article-wrapper').html();
 		loadPage($newContentReadable);
 	break;
 
 	case 'boston':
-		$('div#sharetoolContainer, .OUTBRAIN, #taboola-div, #outBrain').remove();
+		$('div#sharetoolContainer, .OUTBRAIN, #taboola-div, #outBrain, #articleMasthead').remove();
 		var $newContentReadable = $('div#Col1').html();
 		loadPage($newContentReadable);
 	break;
@@ -81,9 +78,45 @@ switch(host) {
 		loadPage($newContentReadable);
 	break;
 
-	case 'cnn':
+	case "wired" :
 		// $('').remove();
+		var $newContentReadable = $('#content').html();
+		loadPage($newContentReadable);
+	break;
+
+	case "venturebeat":
+		// $('').remove();
+		var $newContentReadable = $('#content').html();
+		loadPage($newContentReadable);
+	break;
+
+	case 'mashable':
+		$('div.post_share, #outbrain_height_marker, footer, #comments, section.more-in, div.fb_widget_wrapper, section#commenting').remove();
+		var $newContentReadable = $('div#primary').html();
+		loadPage($newContentReadable);
+	break;
+
+	case 'jacob':
+		$('#readableButton').text('Drag me to your bookmarks');
+		$('div#changeHere').addClass('offset2');
+		$('#socialObnoxious').remove();
+		var $newContentReadable = $('div#readableGrabsThis').html();
+		loadPage($newContentReadable);
+	break;
+
+
+
+
+// These sites don't work:
+
+	case 'cnn':
+		// $('socialObnoxious').remove();
 		var $newContentReadable = $('div#cnnContentContainer').html();
+		loadPage($newContentReadable);
+	break;
+
+	case 'nytimes':
+		var $newContentReadable = $('div#article div.first').html();
 		loadPage($newContentReadable);
 	break;
 
@@ -93,17 +126,13 @@ switch(host) {
 		loadPage($newContentReadable);
 	break;
 
-
-	case 'mashable':
-		$('div.post_share, #outbrain_height_marker, footer, #comments, section.more-in, div.fb_widget_wrapper, section#commenting').remove();
-		var $newContentReadable = $('div#primary').html();
-		loadPage($newContentReadable);
+	default:
+		console.log('not an available website, sorry!');
 	break;
 
 };
 
 loadPage();
-
 
 console.log('Running Readable.io on ' + host);
 
