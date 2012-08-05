@@ -5,6 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="http://jacob.io/readable/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="http://jacob.io/readable/default.css">
 
+	<link rel="stylesheet" href="/default.css" />
+
 	<script type="text/javascript">
 
 	var _gaq = _gaq || [];
@@ -32,14 +34,14 @@
 				</button>
 				<a class="brand" href="./index.html">Readable</a>
 	 			<div class="nav-collapse collapse">
-					<ul class="nav">
+<!--					<ul class="nav">
 						<li class="">
 							<a href="#example">Example</a>
 						</li>
-<!-- 						<li class="">
+ 						<li class="">
 							<a href="./scaffolding.html">Scaffolding</a>
-						</li> -->
-					</ul> 
+						</li>
+					</ul> -->
 				</div>
 			</div>
 		</div>
@@ -63,19 +65,26 @@
 		jsCode.setAttribute('src', 'http://jacob.io/readable/readable.js');
 		document.body.appendChild(jsCode);   
 		}());" id="readableButton">Make this page Readable</a>
+					<h4>With the click of a button, remove the clutter from a page.</h4>
 				</div>
 			</div>
 			<div class="row">
 				<div class="span2">
 					<img src="http://jacob.io/readable/social.png" id="socialObnoxious" />
 				</div>
-				<div id="changeHere" class="span6 offset1">
+				<div id="changeHere" class="span6">
 					<h4>Here's a list of sites Readable currently works on:</h4>
 					<ul>
 						<li><a target="_blank" href="http://forbes.com">Forbes</a></li>
 						<li><a target="_blank" href="http://inc.com">Inc</a></li>
 						<li><a target="_blank" href="http://techcrunch.com">techcrunch</a></li>
 						<li><a target="_blank" href="http://thenextweb.com">thenextweb</a></li>
+						<li><a target="_blank" href="http://theonion.com">The Onion</a></li>
+						<li><a target="_blank" href="http://rollingstone.com">Rolling Stone</a></li>
+						<li><a target="_blank" href="http://boingboing.com">BoingBoing</a></li>
+						<li><a target="_blank" href="http://slate.com">Slate</a></li>
+						<li><a target="_blank" href="http://bostinno.com">Bostinno</a></li>
+						<li><a target="_blank" href="http://reuters.com">Reuters</a></li>
 						<li><a target="_blank" href="http://boston.com">Boston.com</a></li>
 					<!-- 	<li><a target="_blank" href="http://cnn.com">cnn.com</a></li>
 					 -->	<li><a target="_blank" href="http://wired.com">wired.com</a></li>
@@ -84,6 +93,11 @@
 					<!-- 	<li><a target="_blank" href="http://huffingtonpost.com">huffingtonpost</a> ...sometimes :)</li>
 					 -->	<li><a target="_blank" href="http://mashable.com">Mashable</a></li>
 					</ul>
+					<p>You can check out this project on <a href="https://github.com/jcbmllgn/readable">github</a>.</p>
+					<p>(I'm having issues getting it to work on NYtimes, LAtimes, CNN, and Guardian, this is the console error I recieve<br><pre>Uncaught TypeError: Cannot call method 'click' of null readable.js:56</pre><br>Thanks!</p>
+				</div>
+				<div class="span3">
+					<img id="unrelated_news" src="unrelated_news.png">
 				</div>
 			</div>
 		</div>

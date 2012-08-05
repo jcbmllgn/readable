@@ -1,21 +1,20 @@
 div#readable_sidebar{
-	position: relative;
-	top: 40px;
-	left: 40px;
+   position: relative;
+   top: 40px;
+   left: 40px;
    float: left;
 
 }
 
-div#readable_sidebar p {
-	margin: 15px 0px;
-}
-
 div#readable_sidebar p a {
-	color: ;
+   color: ;
 }
 
 a#hideReadable {
-	margin-bottom: 10px;
+   position: fixed;
+   top: 20px;
+   left: 20px;
+   margin-bottom: 15px;
 
   border-top: 1px solid #cccccc;
    background: #f7f7f7;
@@ -50,20 +49,23 @@ a#hideReadable:active {
 
 
 div#uniqueIDright {
-	width:100%;
-	z-index:100000;
-	position:absolute;
-	top:0px;
-	left:0px;
-	background-color:#fafafa;
-	text-align:left;
-	font-family: "Helvetica","Times New Roman","serif";
-	font-size:14px;
-	color: #3e3e3e;
+   width:100%;
+   z-index:100000;
+   position:absolute;
+   top:0px;
+   left:0px;
+   background-color:#fafafa;
+   text-align:left;
+   font-family: "Helvetica","Times New Roman","serif";
+   font-size:14px;
+   color: #3e3e3e;
 }
 
 div#readable_contentReplacement {
-	width:600px; margin:0px auto;
+   width:600px; 
+   margin:0px auto;
+   position: relative;
+   left: -100px;
 }
 
 
